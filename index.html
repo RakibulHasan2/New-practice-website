@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <title>Pick Five Legends</title>
+  <main>
+     <!-- heading section start -->
+    <section>
+        <div class="h-84 bg-black flex justify-between">
+            <div>
+                <img class="h-72 mt-10 " src="images/Group 12.png" alt="">
+           </div>
+            <div class=" w-3/6 text-center">
+                <h1 class="text-5xl font-bold text-white  pt-20 font-serif text-orange-500">Pick Any Five Legends</h1>
+                <img class="float-right" src="images/Line Marker.png" alt=""> <br> <br>
+                <p class="text-white text-xl">Welcome to Our International auction Of Football Federation. You can <br> choose your favorite player. Here are many players given, <br> among them you can select player.</p>
+            </div>
+            <div>
+                <img class="h-72 mt-10" src="images/Card-psg.png" alt="">
+           </div>
+        </div>
+      </section>
+       <!-- heading section end -->
+      
+     <!-- players profile and calculation section start -->
+      <section class="bg-neutral-900">
+        <div class="flex mx-10 px-10">
+
+            <!-- 6 player Box-->
+            <div class="p-10 grid grid-cols-3 gap-5  text-white">
+                <!--Player 1-->
+                <div class="rounded  text-center border border-zinc-700 bg-zinc-900 w-64 h-80 ">
+                  <img class="w-full h-44 mb-2" src="images/6-Players/Rectangle 144.png" alt="">
+                  <h1 class="font-bold text-2xl mb-2">Lionel Messi</h1>
+                  <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                  <button class="border w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName  (this)">Select</button>
+                </div>
+                <!--Player 2-->
+                <div class="rounded  text-center border border-zinc-700 bg-zinc-900 w-64 h-80">
+                    <img class="w-full h-44 mb-2" src="images/6-Players/naymer.png" alt="">
+                    <h1 class="font-bold text-2xl mb-2">Neymar Jr</h1>
+                    <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                    <button class="border text-white w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName(this)">Select</button>
+                  </div>
+                  <!--Player 3-->
+                <div class="rounded  text-center border border-zinc-700 bg-zinc-900 w-64 h-80">
+                    <img class="w-full h-44 mb-2" src="images/6-Players/mbappe.png" alt="">
+                    <h1 class="font-bold text-2xl mb-2">Kylian Mbappé</h1>
+                    <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                    <button class="border text-white w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName(this)">Select</button>
+                  </div>
+                   <!--Player 4-->
+                  <div class="rounded  text-center border border-zinc-700 bg-zinc-900 w-64 h-80">
+                    <img class="w-full h-44 mb-2" src="images/6-Players/Vítor.png" alt="">
+                    <h1 class="font-bold text-2xl mb-2">Vítor Machado</h1>
+                    <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                    <button class="border text-white w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName(this)">Select</button>  
+                  </div>
+                  <!--Player 5-->
+                  <div class="rounded text-center border border-zinc-700 bg-zinc-900 w-64 h-80">
+                    <img class="w-full h-44 mb-2" src="images/6-Players/ramos.png" alt="">
+                    <h1 class="font-bold text-2xl mb-2">Sergio Ramos</h1>
+                    <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                    <button class="border text-white w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName(this)">Select</button>
+                  </div>
+                  <!--Player 6-->
+                  <div class="rounded text-center border border-zinc-700 bg-zinc-900 w-64 h-80">
+                    <img class="w-full h-44 mb-2" src="images/6-Players/Sanches.png" alt="">
+                    <h1 class="font-bold text-2xl mb-2">Renato Sanches</h1>
+                    <h3 class="text-gray-400 text-base mb-2">36 Goals . 120 Assist</h3>
+                    <button class="border text-white w-48 p-2 bg-cyan-900 font-bold" onclick="getPlayerName(this)">Select</button>
+                  </div>
+            </div>
+            <div class="mt-10 text-white text-center ">
+
+              <!-- adding 5 players name start-->
+                <div class="w-64 h-60 bg-black p-5">
+                    <h1 class="font-bold text-2xl">Selected-V</h1>
+                    <img class="mx-10 mb-3" src="images/Ureg-Ureg Marker.png" alt="">
+                    <ul id="player-name-list"> 
+                      
+                  
+                    </ul>
+                </div>
+                <!-- adding 5 players name end-->
+
+                <!-- calculation box start -->
+                <div class="w-64 h-auto mt-7 bg-black p-4">
+                    <h1 class="font-bold text-2xl ">Budget</h1>
+                    <img class="mx-10 mb-3" src="images/Ureg-Ureg Marker.png" alt="">
+                    <div class="flex justify-between mb-3">
+                      <h4 class="mt-2">Per Player :</h4>
+                      <input type="text" class=" border w-28 px-2 p-2 text-white border-zinc-50 bg-black" placeholder="cost" id="per-player-cost">
+                    </div>
+                    <button id="calculate-button" class="border text-white w-48 p-2 bg-cyan-900 font-bold mb-2">Calculate<button>
+                      <div class="flex justify-between mb-3">
+                        <h4>Player Expenses : </h4>
+                        <p>$<span id="player-expenses">00</span></p>
+                      </div>
+                      <div class="flex justify-between mb-3 w-56">
+                        <h4 class="mt-2">Manager :</h4>
+                        <input type="text" class=" border w-28 text-sm px-2 p-2 text-white border-zinc-50 bg-black" placeholder=" Manager cost" id="manager-cost">
+                      </div>
+                      <div class="flex justify-between mb-3 w-56">
+                        <h4 class="mt-2">Coach :</h4>
+                        <input type="text" class=" border w-28 text-sm p-2 text-white border-zinc-50 bg-black" placeholder="Coach cost" id="coach-cost">
+                      </div>
+                    <button id="calculate-total" class="border text-white w-48 p-2 bg-cyan-900 font-bold mb-3">Calculate Total<button></button>
+                    <div class="flex justify-between mb-3">
+                      <h4>Total : </h4>
+                      <p class="text-orange-500 font-bold">$<span id="total-cost">00</span></p>
+                    </div>
+                </div>
+                <!-- calculation box ends -->
+
+            </div>
+        </div>
+      </section>
+        <!-- players profile and calculation section end -->
+  </main>
+   <!-- footer section  -->
+  <footer class="bg-neutral-900 text-white text-center border p-10">
+    <h3>Copyright @ 2022 All Rights Reserved.</h3>
+  </footer>
+  <script src="js/select5.js"></script>
+  <script src="js/budgetCalculation.js"></script>
+</body>
+</html>
